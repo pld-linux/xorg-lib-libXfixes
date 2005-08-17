@@ -17,6 +17,7 @@ BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	libtool
 BuildRequires:	pkg-config
 BuildRequires:	xorg-util-util-macros
+Obsoletes:	libXfixes
 BuildRoot:	%{tmpdir}/libXfixes-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
@@ -36,6 +37,7 @@ Group:		X11/Development/Libraries
 Requires:	xorg-lib-libXfixes = %{version}-%{release}
 Requires:	xorg-proto-fixesproto-devel
 Requires:	xorg-lib-libX11-devel
+Obsoletes:	libXfixes-devel
 
 %description devel
 X Fixes extension library.
@@ -55,6 +57,7 @@ Summary:	Static libXfixes libraries
 Summary(pl):	Biblioteki statyczne libXfixes
 Group:		Development/Libraries
 Requires:	xorg-lib-libXfixes-devel = %{version}-%{release}
+Obsoletes:	libXfixes-static
 
 %description static
 X Fixes extension library.
