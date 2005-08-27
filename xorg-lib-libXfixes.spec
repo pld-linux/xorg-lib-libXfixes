@@ -1,5 +1,3 @@
-
-#
 Summary:	X Fixes extension library
 Summary(pl):	Biblioteka rozszerzenia X Fixes
 Name:		xorg-lib-libXfixes
@@ -12,13 +10,13 @@ Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXfixes-%{version}.tar.bz
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf
 BuildRequires:	automake
-BuildRequires:	xorg-proto-fixesproto-devel
-BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
+BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-proto-fixesproto-devel
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXfixes
-BuildRoot:	%{tmpdir}/libXfixes-%{version}-root-%(id -u -n)
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6
 %define		_mandir		%{_prefix}/man
@@ -29,14 +27,13 @@ X Fixes extension library.
 %description -l pl
 Biblioteka rozszerzenia X Fixes.
 
-
 %package devel
 Summary:	Header files libXfixes development
 Summary(pl):	Pliki nag³ówkowe do biblioteki libXfixes
 Group:		X11/Development/Libraries
-Requires:	xorg-lib-libXfixes = %{version}-%{release}
-Requires:	xorg-proto-fixesproto-devel
+Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
+Requires:	xorg-proto-fixesproto-devel
 Obsoletes:	libXfixes-devel
 
 %description devel
@@ -51,12 +48,11 @@ Biblioteka rozszerzenia X Fixes.
 Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
 u¿ywaj±cych biblioteki libXfixes.
 
-
 %package static
-Summary:	Static libXfixes libraries
-Summary(pl):	Biblioteki statyczne libXfixes
-Group:		Development/Libraries
-Requires:	xorg-lib-libXfixes-devel = %{version}-%{release}
+Summary:	Static libXfixes library
+Summary(pl):	Biblioteka statyczna libXfixes
+Group:		X11/Development/Libraries
+Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXfixes-static
 
 %description static
@@ -69,10 +65,8 @@ Biblioteka rozszerzenia X Fixes.
 
 Pakiet zawiera statyczn± bibliotekê libXfixes.
 
-
 %prep
 %setup -q -n libXfixes-%{version}
-
 
 %build
 %{__libtoolize}
@@ -96,21 +90,18 @@ rm -rf $RPM_BUILD_ROOT
 %post	-p /sbin/ldconfig
 %postun	-p /sbin/ldconfig
 
-
 %files
 %defattr(644,root,root,755)
 %doc AUTHORS ChangeLog README
-%attr(755,root,wheel) %{_libdir}/libXfixes.so.*
-
+%attr(755,root,root) %{_libdir}/libXfixes.so.*.*.*
 
 %files devel
 %defattr(644,root,root,755)
-%{_includedir}/X11/extensions/*.h
+%attr(755,root,root) %{_libdir}/libXfixes.so
 %{_libdir}/libXfixes.la
-%attr(755,root,wheel) %{_libdir}/libXfixes.so
+%{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xfixes.pc
 %{_mandir}/man3/*.3*
-
 
 %files static
 %defattr(644,root,root,755)
