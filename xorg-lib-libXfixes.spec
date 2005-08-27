@@ -15,7 +15,7 @@ BuildRequires:	automake
 BuildRequires:	xorg-proto-fixesproto-devel
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	libtool
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXfixes
 BuildRoot:	%{tmpdir}/libXfixes-%{version}-root-%(id -u -n)
