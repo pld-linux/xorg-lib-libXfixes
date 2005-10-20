@@ -2,18 +2,18 @@ Summary:	X Fixes extension library
 Summary(pl):	Biblioteka rozszerzenia X Fixes
 Name:		xorg-lib-libXfixes
 Version:	3.0.0
-Release:	0.02
+Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/X11R7.0-RC0/lib/libXfixes-%{version}.tar.bz2
-# Source0-md5:	3134ce2f2c922324e1f8ae23900b2c22
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC1/lib/libXfixes-%{version}.tar.bz2
+# Source0-md5:	a3ecf24e050dcc613dd3ceea4672b40f
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf
+BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 0.19
 BuildRequires:	xorg-lib-libX11-devel
-BuildRequires:	xorg-proto-fixesproto-devel
+BuildRequires:	xorg-proto-fixesproto-devel >= 3.0
 BuildRequires:	xorg-util-util-macros
 Obsoletes:	libXfixes
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,7 +30,7 @@ Summary(pl):	Pliki nag³ówkowe do biblioteki libXfixes
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
-Requires:	xorg-proto-fixesproto-devel
+Requires:	xorg-proto-fixesproto-devel >= 3.0
 Obsoletes:	libXfixes-devel
 
 %description devel
@@ -89,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS ChangeLog README
+%doc AUTHORS COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libXfixes.so.*.*.*
 
 %files devel
