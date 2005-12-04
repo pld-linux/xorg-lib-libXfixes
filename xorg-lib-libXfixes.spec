@@ -1,12 +1,12 @@
 Summary:	X Fixes extension library
 Summary(pl):	Biblioteka rozszerzenia X Fixes
 Name:		xorg-lib-libXfixes
-Version:	3.0.1
+Version:	3.0.1.1
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC2/lib/libXfixes-%{version}.tar.bz2
-# Source0-md5:	b27fe7c29da0ea728daa250c9116c53a
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/lib/libXfixes-%{version}.tar.bz2
+# Source0-md5:	66c5e3c97a53cdea61a7228379e8b89c
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-proto-fixesproto-devel >= 3.0
-BuildRequires:	xorg-util-util-macros
+BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	libXfixes
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -98,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libXfixes.la
 %{_includedir}/X11/extensions/*.h
 %{_pkgconfigdir}/xfixes.pc
-%{_mandir}/man3/*.3*
+%{_mandir}/man3/*.3x*
 
 %files static
 %defattr(644,root,root,755)
