@@ -25,8 +25,8 @@ X Fixes extension library.
 Biblioteka rozszerzenia X Fixes.
 
 %package devel
-Summary:	Header files libXfixes development
-Summary(pl):	Pliki nag³ówkowe do biblioteki libXfixes
+Summary:	Header files for libXfixes library
+Summary(pl):	Pliki nag³ówkowe biblioteki libXfixes
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -37,7 +37,7 @@ Obsoletes:	libXfixes-devel
 X Fixes extension library.
 
 This package contains the header files needed to develop programs that
-use these libXfixes.
+use libXfixes.
 
 %description devel -l pl
 Biblioteka rozszerzenia X Fixes.
