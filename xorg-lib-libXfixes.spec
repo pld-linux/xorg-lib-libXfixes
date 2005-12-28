@@ -5,8 +5,8 @@ Version:	3.0.1.2
 Release:	0.1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC4/lib/libXfixes-%{version}.tar.bz2
-# Source0-md5:	f13434c845fb8df1ad0a9f8db0e76285
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libXfixes-%{version}.tar.bz2
+# Source0-md5:	cdf276ef5e155222cd7f70c5ae555fa0
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
