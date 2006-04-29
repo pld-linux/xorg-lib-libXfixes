@@ -1,12 +1,12 @@
 Summary:	X Fixes extension library
 Summary(pl):	Biblioteka rozszerzenia X Fixes
 Name:		xorg-lib-libXfixes
-Version:	3.0.1.2
+Version:	4.0
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/lib/libXfixes-%{version}.tar.bz2
-# Source0-md5:	cdf276ef5e155222cd7f70c5ae555fa0
+Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXfixes-%{version}.tar.bz2
+# Source0-md5:	7f8aa98fe0486a6d732ead756b62ec53
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
