@@ -13,7 +13,7 @@ BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
-BuildRequires:	xorg-proto-fixesproto-devel >= 3.0
+BuildRequires:	xorg-proto-fixesproto-devel >= 4.0
 BuildRequires:	xorg-util-util-macros >= 0.99.2
 Obsoletes:	libXfixes
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,7 +30,7 @@ Summary(pl):	Pliki nag³ówkowe biblioteki libXfixes
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
-Requires:	xorg-proto-fixesproto-devel >= 3.0
+Requires:	xorg-proto-fixesproto-devel >= 4.0
 Obsoletes:	libXfixes-devel
 
 %description devel
