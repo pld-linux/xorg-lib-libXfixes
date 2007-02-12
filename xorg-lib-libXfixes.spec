@@ -1,5 +1,5 @@
 Summary:	X Fixes extension library
-Summary(pl.UTF-8):   Biblioteka rozszerzenia X Fixes
+Summary(pl.UTF-8):	Biblioteka rozszerzenia X Fixes
 Name:		xorg-lib-libXfixes
 Version:	4.0.3
 Release:	3
@@ -26,7 +26,7 @@ Biblioteka rozszerzenia X Fixes.
 
 %package devel
 Summary:	Header files for libXfixes library
-Summary(pl.UTF-8):   Pliki nagłówkowe biblioteki libXfixes
+Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXfixes
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -47,7 +47,7 @@ używających biblioteki libXfixes.
 
 %package static
 Summary:	Static libXfixes library
-Summary(pl.UTF-8):   Biblioteka statyczna libXfixes
+Summary(pl.UTF-8):	Biblioteka statyczna libXfixes
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXfixes-static
