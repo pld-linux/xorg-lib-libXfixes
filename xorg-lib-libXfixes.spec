@@ -1,5 +1,5 @@
 Summary:	X Fixes extension library
-Summary(pl):	Biblioteka rozszerzenia X Fixes
+Summary(pl.UTF-8):   Biblioteka rozszerzenia X Fixes
 Name:		xorg-lib-libXfixes
 Version:	4.0.3
 Release:	3
@@ -21,12 +21,12 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 X Fixes extension library.
 
-%description -l pl
+%description -l pl.UTF-8
 Biblioteka rozszerzenia X Fixes.
 
 %package devel
 Summary:	Header files for libXfixes library
-Summary(pl):	Pliki nag³ówkowe biblioteki libXfixes
+Summary(pl.UTF-8):   Pliki nagÅ‚Ã³wkowe biblioteki libXfixes
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
@@ -39,15 +39,15 @@ X Fixes extension library.
 This package contains the header files needed to develop programs that
 use libXfixes.
 
-%description devel -l pl
+%description devel -l pl.UTF-8
 Biblioteka rozszerzenia X Fixes.
 
-Pakiet zawiera pliki nag³ówkowe niezbêdne do kompilowania programów
-u¿ywaj±cych biblioteki libXfixes.
+Pakiet zawiera pliki nagÅ‚Ã³wkowe niezbÄ™dne do kompilowania programÃ³w
+uÅ¼ywajÄ…cych biblioteki libXfixes.
 
 %package static
 Summary:	Static libXfixes library
-Summary(pl):	Biblioteka statyczna libXfixes
+Summary(pl.UTF-8):   Biblioteka statyczna libXfixes
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
 Obsoletes:	libXfixes-static
@@ -57,10 +57,10 @@ X Fixes extension library.
 
 This package contains the static libXfixes library.
 
-%description static -l pl
+%description static -l pl.UTF-8
 Biblioteka rozszerzenia X Fixes.
 
-Pakiet zawiera statyczn± bibliotekê libXfixes.
+Pakiet zawiera statycznÄ… bibliotekÄ™ libXfixes.
 
 %prep
 %setup -q -n libXfixes-%{version}
