@@ -14,7 +14,7 @@ BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-proto-fixesproto-devel >= 4.0
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.3
 Obsoletes:	libXfixes
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -91,14 +91,15 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc AUTHORS COPYING ChangeLog README
 %attr(755,root,root) %{_libdir}/libXfixes.so.*.*.*
+%attr(755,root,root) %ghost %{_libdir}/libXfixes.so.3
 
 %files devel
 %defattr(644,root,root,755)
 %attr(755,root,root) %{_libdir}/libXfixes.so
 %{_libdir}/libXfixes.la
-%{_includedir}/X11/extensions/*.h
+%{_includedir}/X11/extensions/Xfixes.h
 %{_pkgconfigdir}/xfixes.pc
-%{_mandir}/man3/*.3x*
+%{_mandir}/man3/Xfixes.3x*
 
 %files static
 %defattr(644,root,root,755)
