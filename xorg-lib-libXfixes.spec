@@ -8,13 +8,13 @@ Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXfixes-%{version}.tar.bz2
 # Source0-md5:	1b4b8386bd5d1751b2c7177223ad4629
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-proto-fixesproto-devel >= 4.0
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-util-util-macros >= 1.8
 Obsoletes:	libXfixes
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
