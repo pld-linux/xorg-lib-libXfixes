@@ -1,19 +1,19 @@
 Summary:	X Fixes extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X Fixes
 Name:		xorg-lib-libXfixes
-Version:	4.0.5
+Version:	5.0
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXfixes-%{version}.tar.bz2
-# Source0-md5:	1b4b8386bd5d1751b2c7177223ad4629
+# Source0-md5:	678071bd7f9f7467e2fc712d81022318
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel
-BuildRequires:	xorg-proto-fixesproto-devel >= 4.0
+BuildRequires:	xorg-proto-fixesproto-devel >= 5.0
 BuildRequires:	xorg-util-util-macros >= 1.8
 Obsoletes:	libXfixes
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -30,7 +30,7 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXfixes
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel
-Requires:	xorg-proto-fixesproto-devel >= 4.0
+Requires:	xorg-proto-fixesproto-devel >= 5.0
 Obsoletes:	libXfixes-devel
 
 %description devel
@@ -78,8 +78,7 @@ Pakiet zawiera statyczną bibliotekę libXfixes.
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
-	DESTDIR=$RPM_BUILD_ROOT \
-	pkgconfigdir=%{_pkgconfigdir}
+	DESTDIR=$RPM_BUILD_ROOT
 
 %clean
 rm -rf $RPM_BUILD_ROOT
