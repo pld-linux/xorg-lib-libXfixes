@@ -98,7 +98,7 @@ rm -rf $RPM_BUILD_ROOT
 %{_libdir}/libXfixes.la
 %{_includedir}/X11/extensions/Xfixes.h
 %{_pkgconfigdir}/xfixes.pc
-%{_mandir}/man3/Xfixes.3x*
+%{_mandir}/man3/Xfixes.3*
 
 %files static
 %defattr(644,root,root,755)
