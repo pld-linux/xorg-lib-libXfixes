@@ -1,20 +1,21 @@
 Summary:	X Fixes extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X Fixes
 Name:		xorg-lib-libXfixes
-Version:	5.0.1
-Release:	2
+Version:	5.0.2
+Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	http://xorg.freedesktop.org/releases/individual/lib/libXfixes-%{version}.tar.bz2
-# Source0-md5:	b985b85f8b9386c85ddcfe1073906b4d
-URL:		http://xorg.freedesktop.org/
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXfixes-%{version}.tar.bz2
+# Source0-md5:	544d73df94e638ba7b64147be416e576
+URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
-BuildRequires:	xorg-lib-libX11-devel
+BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-proto-fixesproto-devel >= 5.0
 BuildRequires:	xorg-util-util-macros >= 1.8
+Requires:	xorg-lib-libX11 >= 1.6
 Obsoletes:	libXfixes
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -29,7 +30,7 @@ Summary:	Header files for libXfixes library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXfixes
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
-Requires:	xorg-lib-libX11-devel
+Requires:	xorg-lib-libX11-devel >= 1.6
 Requires:	xorg-proto-fixesproto-devel >= 5.0
 Obsoletes:	libXfixes-devel
 
