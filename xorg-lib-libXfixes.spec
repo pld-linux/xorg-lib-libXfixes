@@ -1,22 +1,22 @@
 Summary:	X Fixes extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X Fixes
 Name:		xorg-lib-libXfixes
-Version:	5.0.3
+Version:	6.0.0
 Release:	1
 License:	MIT
 Group:		X11/Libraries
 Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXfixes-%{version}.tar.bz2
-# Source0-md5:	07e01e046a0215574f36a3aacb148be0
+# Source0-md5:	86f182f487f4f54684ef6b142096bb0f
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	libtool
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libX11-devel >= 1.6
-BuildRequires:	xorg-proto-fixesproto-devel >= 5.0
+BuildRequires:	xorg-proto-fixesproto-devel >= 6.0
 BuildRequires:	xorg-util-util-macros >= 1.8
 Requires:	xorg-lib-libX11 >= 1.6
-Obsoletes:	libXfixes
+Obsoletes:	libXfixes < 3.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -31,8 +31,8 @@ Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki libXfixes
 Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel >= 1.6
-Requires:	xorg-proto-fixesproto-devel >= 5.0
-Obsoletes:	libXfixes-devel
+Requires:	xorg-proto-fixesproto-devel >= 6.0
+Obsoletes:	libXfixes-devel < 3.0.0
 
 %description devel
 X Fixes extension library.
@@ -51,7 +51,7 @@ Summary:	Static libXfixes library
 Summary(pl.UTF-8):	Biblioteka statyczna libXfixes
 Group:		X11/Development/Libraries
 Requires:	%{name}-devel = %{version}-%{release}
-Obsoletes:	libXfixes-static
+Obsoletes:	libXfixes-static < 3.0.0
 
 %description static
 X Fixes extension library.
@@ -89,7 +89,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc AUTHORS COPYING ChangeLog README
+%doc AUTHORS COPYING ChangeLog README.md
 %attr(755,root,root) %{_libdir}/libXfixes.so.*.*.*
 %attr(755,root,root) %ghost %{_libdir}/libXfixes.so.3
 
