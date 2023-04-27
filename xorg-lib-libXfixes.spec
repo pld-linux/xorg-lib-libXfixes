@@ -1,20 +1,24 @@
 Summary:	X Fixes extension library
 Summary(pl.UTF-8):	Biblioteka rozszerzenia X Fixes
 Name:		xorg-lib-libXfixes
-Version:	6.0.0
+Version:	6.0.1
 Release:	1
 License:	MIT
 Group:		X11/Libraries
-Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXfixes-%{version}.tar.bz2
-# Source0-md5:	86f182f487f4f54684ef6b142096bb0f
+Source0:	https://xorg.freedesktop.org/releases/individual/lib/libXfixes-%{version}.tar.xz
+# Source0-md5:	65b9ba1e9ff3d16c4fa72915d4bb585a
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
-BuildRequires:	libtool
+BuildRequires:	libtool >= 2:2
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	tar >= 1:1.22
 BuildRequires:	xorg-lib-libX11-devel >= 1.6
 BuildRequires:	xorg-proto-fixesproto-devel >= 6.0
+BuildRequires:	xorg-proto-xextproto-devel
+BuildRequires:	xorg-proto-xproto-devel >= 7.0.22
 BuildRequires:	xorg-util-util-macros >= 1.8
+BuildRequires:	xz
 Requires:	xorg-lib-libX11 >= 1.6
 Obsoletes:	libXfixes < 3.0.0
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
@@ -32,6 +36,7 @@ Group:		X11/Development/Libraries
 Requires:	%{name} = %{version}-%{release}
 Requires:	xorg-lib-libX11-devel >= 1.6
 Requires:	xorg-proto-fixesproto-devel >= 6.0
+Requires:	xorg-proto-xproto-devel >= 7.0.22
 Obsoletes:	libXfixes-devel < 3.0.0
 
 %description devel
